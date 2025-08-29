@@ -19,6 +19,9 @@
 -            <div className="space-y-4 mb-8">
 +            <div className="space-y-3 sm:space-y-4">
                {benefits.map((benefit, index) => (
+)
+)
+}
 -                <div key={index} className="flex items-center">
 +                <div key={index} className="flex items-start sm:items-center">
                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3 flex-shrink-0" />
@@ -36,6 +39,8 @@
                  {!isPlaying ? (
                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-900">
 -                    <img
+)
+}
 -                      src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop"
 -                      alt="Video Thumbnail"
 -                      className="w-full h-full object-cover opacity-50"

@@ -22,6 +22,8 @@
 +              <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
                
                {isSubmitted ? (
+)
+}
 -                <div className="text-center py-12">
 -                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
 -                  <h4 className="text-2xl font-bold text-slate-800 mb-2">Thank You!</h4>
@@ -106,6 +108,9 @@
 -              <div className="space-y-6">
 +              <div className="space-y-4 sm:space-y-6">
                  {sessionBenefits.map((benefit, index) => (
+                   )
+                   )
+                   }
                    <div key={index} className="flex items-start">
 -                    <div className="flex-shrink-0 w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center mr-4">
 -                      <span className="text-white font-bold text-sm">{index + 1}</span>

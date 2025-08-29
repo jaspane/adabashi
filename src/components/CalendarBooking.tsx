@@ -44,6 +44,9 @@
 -                <div className="grid grid-cols-7 gap-1 mb-2">
 +                <div className="grid grid-cols-7 gap-1 mb-2 text-xs sm:text-sm">
                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
+)
+)
+}
 -                    <div key={day} className="text-center text-sm font-medium text-slate-600 py-2">
 +                    <div key={day} className="text-center font-medium text-slate-600 py-1 sm:py-2">
                        {day}
@@ -61,15 +64,23 @@
                        <button
                          key={i}
                          onClick={() => isAvailable && setSelectedDate(day)}
+                     )
+}
+)
+}
 -                        className={`aspect-square text-sm rounded-lg transition-colors duration-200 ${
+}
 +                        className={`aspect-square text-xs sm:text-sm rounded-lg transition-colors duration-200 ${
                            !isCurrentMonth 
                              ? 'text-slate-300 cursor-not-allowed' 
                              : isSelected
+}
 @@ .. @@
                
                {/* Time Slots */}
                {selectedDate && (
+               )
+               }
 -                <div>
 -                  <h4 className="font-semibold text-slate-700 mb-4">Available Times</h4>
 -                  <div className="grid grid-cols-2 gap-3">
@@ -80,11 +91,16 @@
                        <button
                          key={time}
                          onClick={() => setSelectedTime(time)}
+)
+)
+}
 -                        className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
+}
 +                        className={`py-2 px-2 sm:px-3 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-200 ${
                            selectedTime === time
                              ? 'bg-amber-500 text-white'
                              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+}
 @@ .. @@
              {/* Confirmation Section */}
 -            <div className="p-8 bg-slate-50">
