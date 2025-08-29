@@ -50,11 +50,11 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Client <span className="text-amber-500">Success Stories</span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Discover why discerning clients choose Alex Adabashi for their luxury real estate needs. 
             These testimonials reflect a commitment to excellence and personalized service.
           </p>
@@ -62,37 +62,37 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative">
-              <Quote className="absolute top-4 sm:top-6 right-4 sm:right-6 w-6 h-6 sm:w-8 sm:h-8 text-amber-500 opacity-20" />
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative">
+              <Quote className="absolute top-6 right-6 w-8 h-8 text-amber-500 opacity-20" />
               
-              <div className="flex items-center mb-4 sm:mb-6">
+              <div className="flex items-center mb-6">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
+                  className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-bold text-slate-800 text-sm sm:text-base">{testimonial.name}</h4>
-                  <p className="text-xs sm:text-sm text-slate-600">{testimonial.result}</p>
+                  <h4 className="font-bold text-slate-800">{testimonial.name}</h4>
+                  <p className="text-sm text-slate-600">{testimonial.location}</p>
                 </div>
               </div>
 
-              <div className="flex mb-3 sm:mb-4">
+              <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-current text-amber-500" />
+                  <Star key={i} className="w-5 h-5 fill-current text-amber-500" />
                 ))}
               </div>
 
-              <p className="text-slate-600 leading-relaxed italic text-sm sm:text-base">
+              <p className="text-slate-600 leading-relaxed italic">
                 "{testimonial.text}"
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 sm:mt-16 text-center">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg inline-block w-full max-w-2xl">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mb-4 sm:mb-6">
+        <div className="mt-16 text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg inline-block">
+            <div className="flex items-center justify-center space-x-8 mb-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-500">4.9/5</div>
                 <div className="text-sm text-slate-600">Average Rating</div>
@@ -101,13 +101,13 @@ const Testimonials = () => {
                 <div className="text-3xl font-bold text-amber-500">500+</div>
                 <div className="text-sm text-slate-600">Happy Clients</div>
               </div>
-                <div className="text-2xl sm:text-3xl font-bold text-amber-500">200+</div>
-                <div className="text-xs sm:text-sm text-slate-600">Happy Investors</div>
-                <div className="text-xs sm:text-sm text-slate-600">Success Rate</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-amber-500">98%</div>
+                <div className="text-sm text-slate-600">Satisfaction Rate</div>
               </div>
-            <p className="text-slate-600 max-w-md text-sm sm:text-base">
-                <div className="text-2xl sm:text-3xl font-bold text-amber-500">$50M+</div>
-                <div className="text-xs sm:text-sm text-slate-600">Client Returns</div>
+            </div>
+            <p className="text-slate-600 max-w-md">
+              Join hundreds of satisfied clients who have trusted Alex with their luxury real estate investments.
             </p>
           </div>
         </div>
